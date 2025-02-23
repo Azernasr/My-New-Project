@@ -2,19 +2,14 @@ name: Hello World Workflow
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  build:
+  demo:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - name: Greetings
+      run: echo "Hello,world"
 
-    - name: Run Hello World script
-      run: node hello.js
+    
